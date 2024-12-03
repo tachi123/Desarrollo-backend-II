@@ -1,0 +1,18 @@
+<form method="POST" action="/submitCookie">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+  <label for="correo">Correo electrónico:</label>
+  <input type="email" id="correo" name="correo" required>
+  <button type="submit">Enviar Cookie</button>
+</form>
+
+<button onclick="getCookie()">Obtener Cookie</button>
+
+<script>
+  function getCookie() {
+    fetch('/getCookie')
+      .then(response => {
+        console.log('Cookie:', response);
+      });
+  }
+</script>
