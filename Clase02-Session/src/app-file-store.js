@@ -5,6 +5,7 @@ import FileStore from 'session-file-store';
 
 // Nota cómo conectamos session con lo que será nuestro FileStore.
 const fileStorage = FileStore(session);
+const port = 3000;
 
 const app = express();
 app.use(cookieParser());
@@ -19,6 +20,20 @@ app.use(session({
   saveUninitialized: false
 }));
 
+
+// Define una ruta de ejemplo para el endpoint de login
+app.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+      res.send('Ya estás logeado.');
+  } else {
+      req.session.loggedIn = true;
+      res.send('¡Inicio de sesión exitoso!');
+  }
+});
+
+const server = app.listen(port, ()=> {
+  console.log("Listening on PORT "+ port);
+});
 
 
    
