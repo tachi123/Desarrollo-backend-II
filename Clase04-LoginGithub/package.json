@@ -1,0 +1,23 @@
+{
+  "name": "clase04-logingithub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clase04-logingithub": "file:",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.8.4",
+    "passport": "^0.7.0",
+    "passport-github": "^1.1.0",
+    "passport-github2": "^0.1.12"
+  },
+  "type": "module"
+}

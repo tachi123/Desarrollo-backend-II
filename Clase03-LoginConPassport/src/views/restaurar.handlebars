@@ -1,0 +1,11 @@
+ <h1>Restaurar contraseña</h1>
+
+<form action="/api/restore-password" method="POST">
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="newPassword">Nueva contraseña:</label><br>
+    <input type="password" id="newPassword" name="newPassword" required><br><br>
+    <input type="submit" value="Restaurar contraseña">
+</form>
+
+<p>¿Ya tienes cuenta? <a href="/login">Inicia sesión</a></p>
