@@ -5,6 +5,11 @@ const users = []; //De momento se optará por una persistencia en memoria.
 
 const router = Router();
 
+/* {
+        "name": "nahuel",
+        "email": "example@gmail.com",
+        "password" : "password"
+} */
 router.post('/register', (req, res) => {
     const { name, email, password } = req.body;
     const exists = users.find(user => user.email === email);
