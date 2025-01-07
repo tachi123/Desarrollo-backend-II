@@ -1,8 +1,8 @@
 {
-  "name": "clase04-jwt",
+  "name": "clase07-customrouter",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "clase04-jwt": "file:",
-    "cookie-parser": "^1.4.7",
+    "clase07-customrouter": "file:",
     "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1"
   },
