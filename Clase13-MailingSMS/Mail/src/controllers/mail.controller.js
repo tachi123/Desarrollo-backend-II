@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 import config from '../config/config.js';
+import __dirname from '../utils.js';
 
 const transport = nodemailer.createTransport({
     service: config.mailService,
@@ -14,8 +15,8 @@ export const enviarCorreo = async (req, res) => {
     try{
         const{ destinatario, asunto, mensaje } = req.body;
         let result = await transport.sendMail({
-            from: mailFrom,
-            to: destinatario || mailFrom,
+            from: config.mailFrom,
+            to: destinatario || config.mailFrom,
             subject: asunto ||  "Correo de prueba",
             html: `
                 <div>
