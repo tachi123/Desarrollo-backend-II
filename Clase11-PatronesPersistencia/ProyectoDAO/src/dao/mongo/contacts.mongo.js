@@ -24,8 +24,8 @@ export default class Contacts {
         return contact;
     }
 
-    delete = () => {
-        
+    delete = async (id) => {
+        await contacts.findByIdAndDelete(id);
     }
 
 }
