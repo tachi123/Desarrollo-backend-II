@@ -19,7 +19,7 @@ export default class Contacts {
         return contact;
     }
 
-    update = async(id, contact) => {
+    update = async (id, contact) => {
         await contactsModel.findByIdAndUpdate(id, contact, {new : true});
         return contact;
     }

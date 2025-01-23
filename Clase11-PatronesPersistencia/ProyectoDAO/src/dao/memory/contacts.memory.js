@@ -21,6 +21,7 @@ export default class Contacts {
 
     update = (id, contact) => {
         const index = this.data.findIndex( c => c.id === id);
+        if(index === -1) return null;
     }
 
     delete = () => {
